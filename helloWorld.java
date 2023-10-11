@@ -1,5 +1,4 @@
-import java.io.*;
-class details
+class Hello
 {
 	public static void main(String args[])
 	{
