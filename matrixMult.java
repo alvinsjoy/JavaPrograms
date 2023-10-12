@@ -62,7 +62,7 @@ class matrixMult
 					}
 				}			
 			}
-            System.out.println("Result");
+            System.out.println("Result:");
             for(int i=0;i<r1;i++)
             {
 				for(int j=0;j<c2;j++)
