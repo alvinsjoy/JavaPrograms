@@ -69,7 +69,7 @@ class matrixMult
                 {
 					System.out.print(c[i][j]+" ");
 				}
-				System.out.println(" ");
+				System.out.println();
 			}
         }
         else
