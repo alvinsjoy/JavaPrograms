@@ -33,6 +33,24 @@ class Sum
 					b[i][j]=sc.nextInt();
 				}
 			}
+			System.out.println("Matrix1:");
+			for(int i=0;i<r1;i++)
+			{  
+				for(int j=0;j<c1;j++)
+				{ 
+					System.out.print(a[i][j]+" ");    
+				}
+				System.out.println();
+			}
+			System.out.println("Matrix2:");
+			for(int i=0;i<r2;i++)
+			{  
+				for(int j=0;j<c2;j++)
+				{ 
+					System.out.print(b[i][j]+" ");    
+				}
+				System.out.println();
+			}
 			System.out.println("The result is:");
 			for(int i=0;i<r1;i++)
 			{  
