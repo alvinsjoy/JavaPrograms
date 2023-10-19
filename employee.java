@@ -2,23 +2,23 @@ import java.util.Scanner;
 
 class Employee
 {
-    private int id;
-    private String name;
-    private int age;
-    private String gender;
-    private String designation;
-    private double salary;
-    private String address;
+    int id;
+    String name;
+    int age;
+    String gender;
+    String designation;
+    double salary;
+    String address;
 
-    Employee(int id, String name, int age, String gender, String designation, double salary, String address)
+    Employee(int id,String name,int age,String gender,String designation,double salary,String address)
     {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.designation = designation;
-        this.salary = salary;
-        this.address = address;
+        this.id=id;
+        this.name=name;
+        this.age=age;
+        this.gender=gender;
+        this.designation=designation;
+        this.salary=salary;
+        this.address=address;	
     }
 
     int getId()
@@ -38,16 +38,17 @@ class Employee
     }
 }
 
-class EmployeeDatabase
+class TestEmp
 {
-    public static void main(String[] args)
+    public static void main(String args[])
     {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of employees: ");
         int n = scanner.nextInt();
-        Employee[] employees = new Employee[n];
-        for (int i = 0; i < n; i++) {
-            System.out.println("Enter details for Employee " + (i + 1) + ":");
+        Employee employees[] = new Employee[n];
+        for (int i=0;i<n;i++)
+        {
+            System.out.println("Enter details for Employee " + (i+1)+":");
             System.out.print("Employee ID: ");
             int id = scanner.nextInt();
             scanner.nextLine();
@@ -70,10 +71,10 @@ class EmployeeDatabase
         }
         System.out.print("Enter the ID of the employee you want to search for: ");
         int searchId = scanner.nextInt();
-        int flag = 0;
+        int flag=0;
         for (Employee employee : employees)
         {
-            if (employee.getId() == searchId)
+            if (employee.getId()==searchId)
             {
                 employee.displayDetails();
                 flag=1;
