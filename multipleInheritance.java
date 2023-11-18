@@ -23,9 +23,9 @@ class Test extends Student
     float term1, term2;
     void getMarks()
 	{
-		System.out.println("Enter the marksfor term1:");
+		System.out.println("Enter the marks for term1:");
 		term1=sc.nextFloat();
-		System.out.println("Enter the marksfor term2:");
+		System.out.println("Enter the marks for term2:");
 		term2=sc.nextFloat();
 	}
 	void putMarks()
