@@ -15,7 +15,6 @@ class Fact
 		System.out.println("Enter the number: ");
 		int num=sc.nextInt();
 		int ans=f.factorial(num);
-		System.out.println("Factorial of "+num+" is:
-		"+ans);
+		System.out.println("Factorial of "+num+" is:"+ans);
 	}
 }
