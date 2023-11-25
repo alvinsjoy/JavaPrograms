@@ -1,4 +1,3 @@
-import java.io.*;
 class Exception
 {
 	void testTry()

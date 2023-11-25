@@ -1,15 +1,12 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
-import java.io.FileReader;
-import java.io.FileWriter;
-class File
+class Files
 {
 	public static void main(String[] args)
     {	
     	String data;
     	try {
-    		File f = new File("./files/file.txt");
+    		File f = new File("files/file.txt");
     		if (f.createNewFile())
     			System.out.println("File "+f.getName()+" is created");
     		else
@@ -23,25 +20,27 @@ class File
         System.out.println("Enter the data:");
         data = sc.nextLine();
         try{
-        	FileWriter fw = new FileWriter("./files/file.txt");
-        	fw.write(data);
+        	FileWriter f = new FileWriter("files/file.txt");
+        	f.write(data);
+			f.close();
         }
         catch(IOException e){
         	System.out.println("File not found");
         	e.printStackTrace();
         }
         try{
-        int i;
-        	FileReader fr = new FileReader("./files/file.txt");
-        	while((i=fr.read())!=-1)    
-              System.out.print(i);
+        	int i;
+        	FileReader f = new FileReader("files/file.txt");
+        	while((i=f.read())!=-1)
+				System.out.print((char)i);
+			f.close();
         }
         catch(IOException e){
         	System.out.println("File not found");
         	e.printStackTrace();
         }
         finally{
-        	f.close();
+        	//f.close();
         }
     }
 }
