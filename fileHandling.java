@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 class Files
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
     {	
     	String data;
 		FileWriter fw = null;
@@ -15,7 +15,7 @@ class Files
     			System.out.println("File already exist");
     	}
     	catch(IOException e){
-    		System.out.println("An unexpected error is occurred.");
+    		System.out.println("An unexpected error has occurred.");
     		e.printStackTrace();
     	}   
     	Scanner sc = new Scanner(System.in);
@@ -24,12 +24,20 @@ class Files
         try{
         	fw = new FileWriter("files/file.txt");
         	fw.write(data);
-			fw.close();
         }
         catch(IOException e){
         	System.out.println("File not found");
         	e.printStackTrace();
         }
+		finally{
+			try{
+				fw.close();
+			}
+			catch(IOException e){
+				System.out.println("File not found");
+				e.printStackTrace();
+			}
+		}
         try{
         	int i;
         	fr = new FileReader("files/file.txt");
@@ -43,7 +51,6 @@ class Files
         finally{
 			try{
 				fr.close();
-				fw.close();
 			}
 			catch(IOException e){
 				System.out.println("File not found");

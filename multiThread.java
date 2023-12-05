@@ -42,7 +42,7 @@ class CubeThread extends Thread {
         System.out.println("Cube of " + n + "= " + (n * n * n));
     }
 }
-public class MultipleThreads {
+class MultipleThreads {
     public static void main(String args[]) {
         RandomNumbers rn = new RandomNumbers();
         rn.start();
