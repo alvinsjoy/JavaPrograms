@@ -5,10 +5,12 @@ class Files
 	public static void main(String[] args)
     {	
     	String data;
+		FileWriter fw = null;
+		FileReader fr = null;
     	try {
-    		File f = new File("files/file.txt");
-    		if (f.createNewFile())
-    			System.out.println("File "+f.getName()+" is created");
+    		File file = new File("files/file.txt");
+    		if (file.createNewFile())
+    			System.out.println("File "+file.getName()+" is created");
     		else
     			System.out.println("File already exist");
     	}
@@ -20,9 +22,9 @@ class Files
         System.out.println("Enter the data:");
         data = sc.nextLine();
         try{
-        	FileWriter f = new FileWriter("files/file.txt");
-        	f.write(data);
-			f.close();
+        	fw = new FileWriter("files/file.txt");
+        	fw.write(data);
+			fw.close();
         }
         catch(IOException e){
         	System.out.println("File not found");
@@ -30,17 +32,23 @@ class Files
         }
         try{
         	int i;
-        	FileReader f = new FileReader("files/file.txt");
-        	while((i=f.read())!=-1)
+        	fr = new FileReader("files/file.txt");
+        	while((i=fr.read())!=-1)
 				System.out.print((char)i);
-			f.close();
         }
         catch(IOException e){
         	System.out.println("File not found");
         	e.printStackTrace();
         }
         finally{
-        	//f.close();
+			try{
+				fr.close();
+				fw.close();
+			}
+			catch(IOException e){
+				System.out.println("File not found");
+				e.printStackTrace();
+			}
         }
     }
 }
