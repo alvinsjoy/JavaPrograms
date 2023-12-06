@@ -22,18 +22,14 @@ class Binary
 		while(start<=end)
 		{
 			if(arr[mid]<key)
-			{
 				start=mid+1;
-			}
 			else if(arr[mid]==key)
 			{
 				System.out.println("Element found at: "+(mid+1));
 				break;
 			}
 			else
-			{
 				end=mid-1;
-			}
 		mid=(start+end)/2;
 		}
 		if(start>end)

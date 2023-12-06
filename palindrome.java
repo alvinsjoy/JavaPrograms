@@ -5,12 +5,8 @@ public class palindrome
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the string:");
-		String str=sc.nextLine();
-		int flag,i,len,left,right;
-		flag=1;
-		i=0;
-		left=0;
-		len=str.length();
+		String str=sc.nextLine().toLowerCase();
+		int flag=1,left=0,right;
 		right=str.length()-1;
 		while(left<right)
 		{
