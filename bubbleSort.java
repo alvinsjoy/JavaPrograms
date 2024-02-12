@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-class Bubble {
+class bubbleSort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of elements: ");
@@ -11,12 +11,12 @@ class Bubble {
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
-        bubbleSort(arr);       
+        bubble(arr);       
         System.out.println("Sorted array:");
         printArray(arr);
         scanner.close();
     }   
-    public static void bubbleSort(int[] arr) {
+    public static void bubble(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
